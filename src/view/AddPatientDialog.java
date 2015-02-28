@@ -1,8 +1,6 @@
 package view;
 
 
-
-
 import javax.swing.*;
 
 import java.awt.*;
@@ -44,13 +42,16 @@ public class AddPatientDialog extends JDialog {
         // add the main panel to the dialog
         this.getContentPane().add(mainPanel);
 
-        mainPanel.setVisible(true);
+        this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 
+
+        this.setPreferredSize(new Dimension(500,180));
+        this.setMinimumSize(new Dimension(500,180));
+        
 
     }
 
     public JPanel createCenterPanel() {
-
 
 
         // create the panel
@@ -67,7 +68,6 @@ public class AddPatientDialog extends JDialog {
         DialogHorizPanel namePanel = new DialogHorizPanel(NAME_LABEL);
         DialogHorizPanel addressPanel = new DialogHorizPanel(ADDRESS_LABEL);
         DialogHorizPanel genderPanel = new DialogHorizPanel(GENDER_LABEL);
-
 
 
         // add the panels to the center panel
@@ -110,14 +110,13 @@ public class AddPatientDialog extends JDialog {
             //we only added an instance of this listener to
             //JButton objects
             JButton sourceButton = (JButton) e.getSource();
+
             if (sourceButton.equals(btnAddPatient)) {
 
                 System.out.println("Add Patient Clicked.");
             } else if (sourceButton.equals(btnClose)) {
 
-                //outerClass.dispose();          // not sure which is the proper way to dispose here
-                                                 // I assume that the signal to dispose gets passed to the outer class
-                dispose();                       // as it appears to work both ways.
+                dispose();
             }
 
 

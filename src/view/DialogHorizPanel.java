@@ -11,6 +11,8 @@ public class DialogHorizPanel extends JPanel {
 
     private JLabel label;
     private JTextField textField;
+    // define the width and height of the label
+    // and the padding
     private int w = 60, h = 25, padding = 25;
 
 
@@ -19,19 +21,19 @@ public class DialogHorizPanel extends JPanel {
         textField = new JTextField();
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
 
-
+        // set the size of the label
         label.setPreferredSize(new Dimension(w, h));
-
-        //textField.setPreferredSize(new Dimension(this.getWidth() - w, h));
 
         this.add(label);
         this.add(textField);
 
     }
 
-    // I need to override the PaintComponent() method because it is called
-    // when the components are put on the GUI, and thus I can get the width of the parent container
-    // which I need to make my text field stretch dynamically
+    /**
+     * I need to override the PaintComponent() method because it is called
+     * when the components are put on the GUI, and thus I can get the width of the parent container
+     * which I need to make my text field stretch dynamically
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -43,12 +45,14 @@ public class DialogHorizPanel extends JPanel {
     }
 
 
-
+    // For future implementation
     public String getTextFieldText() {
         return textField.getText();
     }
 
-    public void setTextField(String s) {
+    // For future implementation
+    public void setTextFieldText(String s) {
+
         textField.setText(s);
     }
 }

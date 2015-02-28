@@ -6,6 +6,7 @@ package model;
 public class ChildPatient extends Patient {
 
     private String nameOfSchool;
+
     public ChildPatient(String name, String address, String gender, String nameOfSchool) {
 
         super(name, address, gender);
