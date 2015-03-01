@@ -36,12 +36,13 @@ public class DialogHorizPanel extends JPanel {
      */
     @Override
     public void paintComponent(Graphics g) {
-        super.paintComponent(g);
+        //super.paintComponent(g);
 
         // set the width of the text field to the width of parent container
         // minus the width of the label plus some padding
         textField.setSize(new Dimension(this.getParent().getWidth() - (w + padding), h));
-
+        // this.setSize(getParent().getWidth(), h);
+        super.paintComponent(g);
     }
 
 

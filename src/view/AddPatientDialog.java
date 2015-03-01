@@ -46,8 +46,8 @@ public class AddPatientDialog extends JDialog {
 
 
         this.setPreferredSize(new Dimension(500,180));
-        this.setMinimumSize(new Dimension(500,180));
-        
+        //this.setMinimumSize(new Dimension(500,180));
+
 
     }
 
@@ -60,15 +60,21 @@ public class AddPatientDialog extends JDialog {
         // set a layout
 
         // Set vertical box layout on the main panel
-        centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.PAGE_AXIS));
+        //centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.PAGE_AXIS));
+        centerPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
 
 
         // Create our 3 horizontal panels (custom component extended from JPanel)
         // and pass in the text for the label
+
         DialogHorizPanel namePanel = new DialogHorizPanel(NAME_LABEL);
         DialogHorizPanel addressPanel = new DialogHorizPanel(ADDRESS_LABEL);
         DialogHorizPanel genderPanel = new DialogHorizPanel(GENDER_LABEL);
 
+        //FixedHeightPanel testPanel = new FixedHeightPanel();
+
+
+        //centerPanel.add(testPanel);
 
         // add the panels to the center panel
         centerPanel.add(namePanel);
