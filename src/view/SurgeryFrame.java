@@ -44,6 +44,10 @@ public class SurgeryFrame extends JFrame {
 
 
     private JScrollPane createTableScrollPane() {
+
+        // Create a table and a scrollpane, add patients to an arraylist, connect the arraylist
+        // to the table model, connect the table model to the table, put the table in a scrollpane,
+        // and return the scrollpane
         patientTable = new JTable();
 
 
@@ -120,10 +124,7 @@ public class SurgeryFrame extends JFrame {
         }
 
         public void actionPerformed(ActionEvent e) {
-            //We know that the source of any ActionEvent
-            //in this program MUST be a JButton seeing as
-            //we only added an instance of this listener to
-            //JButton objects
+            //Listener for button clicks.
             JButton sourceButton = (JButton) e.getSource();
 
             if (sourceButton.equals(addButton)) {
@@ -144,6 +145,7 @@ public class SurgeryFrame extends JFrame {
 
             // This is the code that responds to the delete button
             else {
+
                 // check if row is selected
                 if (patientTable.getSelectedRow() == -1) {
 

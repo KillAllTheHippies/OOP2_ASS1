@@ -45,8 +45,9 @@ public class AddPatientDialog extends JDialog {
         this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 
 
-        this.setPreferredSize(new Dimension(500,180));
-        this.setMinimumSize(new Dimension(500,180));
+
+        this.setSize(650,180);
+        this.setResizable(false);
         
 
     }
